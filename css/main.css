@@ -1,0 +1,203 @@
+/*!
+* FROM CSS to SASS
+* by Akshat Bhanchawat
+* Organized by Progate
+*/
+/*Default presets*/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*Adding background circles*/
+body {
+  height: 100%;
+}
+
+body #bg1 {
+  -webkit-clip-path: circle(80% at 0% 50%);
+          clip-path: circle(80% at 0% 50%);
+  background-color: #673ab7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+body #bg2 {
+  -webkit-clip-path: circle(80% at 140% 50%);
+          clip-path: circle(80% at 140% 50%);
+  background-color: #673ab7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Setting logo text properties*/
+h2 {
+  color: white;
+  padding-left: 10px;
+  margin-top: 0;
+  padding-top: 0.5em;
+}
+
+/*Developing and aligning content in grid*/
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% auto;
+      grid-template-columns: 50% auto;
+      grid-template-areas: "info contact";
+}
+
+main section {
+  height: 100%;
+  margin: 0 auto;
+}
+
+main section.info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: info;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3em 0 0 3em;
+}
+
+main section.info h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 3em;
+}
+
+main section.contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contact;
+}
+
+main section.contact span {
+  color: #673ab7;
+}
+
+/*Setting left content*/
+.info .card {
+  margin-top: 5em;
+  width: 80%;
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+.info .card ul {
+  list-style: none;
+}
+
+.info .card #human {
+  width: 20%;
+  position: absolute;
+  top: 13em;
+  left: 25em;
+}
+
+/* Making bullets */
+span.bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #9f80d7;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Adding animation */
+li:nth-child(1) {
+  -webkit-animation: 2s slide-right forwards;
+          animation: 2s slide-right forwards;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation-delay: 0.33333s;
+          animation-delay: 0.33333s;
+}
+
+li:nth-child(2) {
+  -webkit-animation: 2s slide-right forwards;
+          animation: 2s slide-right forwards;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation-delay: 0.66667s;
+          animation-delay: 0.66667s;
+}
+
+li:nth-child(3) {
+  -webkit-animation: 2s slide-right forwards;
+          animation: 2s slide-right forwards;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes slide-right {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+/* Right contact form */
+.contact-card {
+  width: 80%;
+  background-color: white;
+  padding: 1.4em;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card input {
+  width: 95%;
+  height: 3em;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.contact-card textarea {
+  margin-top: 0.5em;
+  border-radius: 5px;
+  width: 95%;
+  font-size: 16px;
+  padding: 10px 0 0 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.contact-card button {
+  margin-top: 1em;
+  background-color: #673ab7;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  font-size: x-large;
+}
+/*# sourceMappingURL=main.css.map */
